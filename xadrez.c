@@ -1,32 +1,33 @@
-#include <stdio.h>
-
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+#include <stdio.h> // Inclui a biblioteca padrão de entrada e saída
 
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    // --- Simulação do Movimento da Torre (usando for) ---
+    printf("--- Movimento da Torre (5 casas para a Direita) ---\n");
+    int i; // Variável de controle para o loop for
+    for (i = 0; i < 5; i++) {
+        printf("Direita\n"); // A torre move uma casa para a direita
+    }
+    printf("\n"); // Adiciona uma linha em branco para separar as simulações
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    // --- Simulação do Movimento do Bispo (usando while) ---
+    printf("--- Movimento do Bispo (5 casas na Diagonal Cima-Direita) ---\n");
+    int contador_bispo = 0; // Variável de controle para o loop while
+    while (contador_bispo < 5) {
+        printf("Cima, Direita\n"); // O bispo move uma casa na diagonal Cima-Direita
+        contador_bispo++;          // Incrementa o contador
+    }
+    printf("\n"); // Adiciona uma linha em branco para separar as simulações
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    // --- Simulação do Movimento da Rainha (usando do-while) ---
+    printf("--- Movimento da Rainha (8 casas para a Esquerda) ---\n");
+    int contador_rainha = 0; // Variável de controle para o loop do-while
+    // O loop do-while garante que o bloco de código seja executado pelo menos uma vez,
+    // o que é adequado para simular o primeiro movimento antes da verificação da condição.
+    do {
+        printf("Esquerda\n"); // A rainha move uma casa para a esquerda
+        contador_rainha++;    // Incrementa o contador
+    } while (contador_rainha < 8);
+    printf("\n"); // Adiciona uma linha em branco no final
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
-
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
-
-    return 0;
+    return 0; // Retorna 0 para indicar que o programa foi executado com sucesso
 }
